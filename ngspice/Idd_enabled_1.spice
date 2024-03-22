@@ -1,0 +1,7 @@
+** sch_path: /home/ttuser/chipalooza2024/sky130_icrg_ip__ulpcomp/cace/tb_dynamic_current.sch
+**.subckt tb_dynamic_current
+V3 ena GND Pulse(0 1*1.8 0 0.1n 0.1n 0.5n 1n)
+avdd avdd GND 3.3
+dvdd dvdd GND 1.8
+avss avss GND 0
+dvss dvss GND 0

@@ -1,0 +1,41 @@
+** sch_path: /home/ttuser/chipalooza2024/sky130_icrg_ip__ulpcomp/cace/tb_offset_voltage.sch
+**.subckt tb_offset_voltage
+?
+avdd avdd GND {avdd}
+dvdd dvdd GND {dvdd}
+{avss} avss GND {avss}
+dvss dvss GND {dvss}
+C4 vout GND 0.5p m=1
+Vcm net1 avss DC {Vcm}
+ena ena GND Pulse(0 {ena}*1.8 0 0.1n 0.1n 0.5n 1n)
+?
+**** begin user architecture code
+
+
+.lib /home/ttuser/pdk/sky130A/libs.tech/combined/sky130.lib.spice {corner}
+.option TEMP={temperature}
+
+
+.control
+** Find zero crossing for positive input differential, zero crossing for negative
+** input differential, then compute the average
+tran [{risetime} * 2 / 1000] [{risetime} * 2]
+meas tran vhigh FIND V(vinp) WHEN V(vout) = [{dvdd} / 2] CROSS=1
+meas tran vlow FIND V(vinp) WHEN V(vout) = [{dvdd} / 2] CROSS=2
+let vrise = $&vhigh - {Vcm}
+let vfall = $&vlow - {Vcm}
+
+let voffset = 0.5 * ($&vrise + $&vfall)
+let vhyst = $&vrise - $&vfall
+
+echo $&voffset $&vhyst > {simpath}/{filename}_{N}.data
+*set wr_singlescale
+*wrdata {simpath}/{filename}_{N}.data V(out) V(inp) V(inm)
+quit
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

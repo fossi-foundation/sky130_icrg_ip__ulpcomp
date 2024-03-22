@@ -1,0 +1,32 @@
+** sch_path: /home/ttuser/chipalooza2024/sky130_icrg_ip__ulpcomp/cace/tb_propdelay.sch
+**.subckt tb_propdelay
+V3 ena GND Pulse(0 1.8 0 0.1n 0.1n 0.5n 1n)
+V4 avdd GND 3.3
+V5 dvdd GND 1.8
+V6 avss GND 0
+V7 dvss GND 0
+E1 vinn GND VOL=' '1.8*sin(time*pi*1e6)' '
+E2 vinp GND VOL=' '1.8*sin(time*2*pi*1e6)' '
+XC2 voutb GND sky130_fd_pr__cap_mim_m3_1 W=10 L=8 MF=3 m=3
+XC1 vout GND sky130_fd_pr__cap_mim_m3_1 W=10 L=8 MF=3 m=3
+x1 dvdd avdd ena vinp vinn vout voutb avss dvss sky130_icrg_ip__ulpcomp
+**** begin user architecture code
+
+
+.lib /home/ttuser/pdk/sky130A/libs.tech/combined/sky130.lib.spice {corner}
+.option TEMP={temperature}
+
+
+.control
+tran 10n 1u
+meas tran trise WHEN V(vout) = [{dvdd} / 2] CROSS=1
+let tpd = $&trise
+
+echo $&tpd > {simpath}/{filename}_{N}.data
+quit
+.endc
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

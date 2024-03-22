@@ -1,0 +1,42 @@
+** sch_path: /home/ttuser/chipalooza2024/sky130_icrg_ip__ulpcomp/cace/tb_PSRR.sch
+**.subckt tb_PSRR
+x2 avdd dvdd ena vinp vinn vout net2 avss dvss sky130_icrg_ip__ulpcomp
+?
+?
+?
+{avss} avss GND {avss}
+dvss dvss GND {dvss}
+C4 vout GND 0.5p m=1
+?
+ena ena GND Pulse(0 {ena}*1.8 0 0.1n 0.1n 0.5n 1n)
+?
+**** begin user architecture code
+
+
+.lib /home/ttuser/pdk/sky130A/libs.tech/combined/sky130.lib.spice {corner}
+.option TEMP={temperature}
+
+
+.control
+** CMRR is defined as the change in input offset vs. change in common-mode voltage.
+tran [{risetime} * 2 / 100] [{risetime} * 4]
+meas tran vhigh1 FIND V(vinp) WHEN V(vout) = [{dvdd|minimum} / 2] CROSS=1
+meas tran vlow1 FIND V(vinp) WHEN V(vout) = [{dvdd|minimum} / 2] CROSS=2
+meas tran vhigh2 FIND V(vinp) WHEN V(vout) = [{dvdd|maximum} / 2] CROSS=3
+meas tran vlow2 FIND V(vinp) WHEN V(vout) = [{dvdd|maximum} / 2] CROSS=4
+
+let voffset1 = 0.5 * ($&vhigh1 + $&vlow1)
+let voffset2 = 0.5 * ($&vhigh2 + $&vlow2)
+
+let psrr = ($&voffset1 - $&voffset2) / ({dvdd|maximum} - {dvdd|minimum})
+let psrrdb = 20 * log(abs($&psrr))
+
+echo $&cmrrdb > {simpath}/{filename}_{N}.data
+quit
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end
