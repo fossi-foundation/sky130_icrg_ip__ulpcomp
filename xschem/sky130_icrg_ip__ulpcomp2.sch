@@ -172,10 +172,6 @@ N 1320 -310 1320 -280 {
 lab=dvss}
 N 1420 -420 1450 -420 {
 lab=clkb}
-N 1360 -360 1550 -360 {
-lab=#net4}
-N 1260 -360 1320 -360 {
-lab=vout}
 N 410 -510 410 -500 {
 lab=#net3}
 N 290 -540 370 -540 {
@@ -204,8 +200,14 @@ N 940 -350 1000 -350 {
 lab=clka}
 N 1040 -350 1120 -350 {
 lab=clkb}
+N 1400 -360 1550 -360 {
+lab=#net4}
+N 1360 -360 1400 -360 {
+lab=#net4}
+N 1280 -360 1320 -360 {
+lab=vout}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 390 -450 0 0 {name=M1
-L=0.5
+L=1
 W=3
 nf=1
 mult=1
@@ -219,7 +221,7 @@ model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 260 -340 0 0 {name=M2
-L=0.5
+L=1
 W=3
 nf=1
 mult=1
@@ -233,7 +235,7 @@ model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 560 -340 0 1 {name=M3
-L=0.5
+L=1
 W=3
 nf=1
 mult=1
@@ -448,7 +450,7 @@ C {devices/lab_pin.sym} 2040 -420 2 0 {name=p16 sig_type=std_logic lab=clkb
 }
 C {devices/lab_pin.sym} 1610 -100 0 0 {name=p17 sig_type=std_logic lab=clkb
 }
-C {devices/opin.sym} 1260 -360 2 0 {name=p18 lab=vout}
+C {devices/opin.sym} 1280 -360 2 0 {name=p18 lab=vout}
 C {devices/opin.sym} 1720 -20 0 0 {name=p19 lab=dvss}
 C {devices/lab_pin.sym} 1880 -210 2 0 {name=p20 sig_type=std_logic lab=dvss}
 C {devices/lab_pin.sym} 1560 -210 0 0 {name=p21 sig_type=std_logic lab=dvss}
