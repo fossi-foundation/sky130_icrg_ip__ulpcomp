@@ -17,7 +17,7 @@ xschem sky130_icrg_ip__ulpcomp2.sch
 ```
 
 ## CACE 
-Please check the schematic testbench in the `CACE` file and replace the PDK filepath and write data filepath to your own.
+Please check the schematic testbench in the `CACE` file and replace the `PDK filepath` and `write data filepath` to your own.
 
 Run CACE to see simulation results against a set of specifications:
 
