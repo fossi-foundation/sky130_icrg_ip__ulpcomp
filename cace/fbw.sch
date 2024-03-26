@@ -69,24 +69,24 @@ lab=#net2}
 N 410 -510 410 -500 {
 lab=#net3}
 N 290 -540 370 -540 {
-lab=ena}
-N 410 -540 500 -540 {
-lab=avss}
-N -410 -470 -410 -400 {
+lab=enab}
+N -540 -470 -540 -400 {
 lab=avdd}
-N -230 -470 -230 -400 {
+N -360 -470 -360 -400 {
 lab=avss}
-N -140 -660 -140 -600 {
+N -270 -660 -270 -600 {
 lab=clk}
-N -230 -660 -230 -600 {
-lab=ena}
-N -410 -670 -410 -600 {
+N -360 -660 -360 -600 {
+lab=enab}
+N -540 -670 -540 -600 {
 lab=vinp}
-N -320 -670 -320 -600 {
+N -450 -670 -450 -600 {
 lab=vinn}
+N 410 -570 410 -540 {
+lab=avdd}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 390 -450 0 0 {name=M1
 L=1
-W=3
+W=5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -100,7 +100,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 260 -340 0 0 {name=M2
 L=1
-W=3
+W=5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -114,7 +114,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 560 -340 0 1 {name=M3
 L=1
-W=3
+W=5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -175,42 +175,27 @@ sa=0 sb=0 sd=0
 model=nfet_03v3_nvt
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 290 -540 0 0 {name=p27 lab=ena}
-C {devices/lab_pin.sym} 500 -540 2 0 {name=p28 sig_type=std_logic lab=avss}
-C {sky130_fd_pr/nfet_03v3_nvt.sym} 390 -540 0 0 {name=M20
-L=0.5
-W=3
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3_nvt
-spiceprefix=X
-}
+C {devices/lab_pin.sym} 290 -540 0 0 {name=p27 lab=enab}
 C {devices/lab_pin.sym} 190 -280 0 0 {name=p6 sig_type=std_logic lab=oneg}
 C {devices/lab_pin.sym} 180 -340 0 0 {name=p2 sig_type=std_logic lab=vinp}
-C {devices/vsource.sym} -410 -370 0 0 {name=V1 value="DC 3.3" savecurrent=false}
-C {devices/vsource.sym} -230 -370 0 0 {name=V3 value=0 savecurrent=false}
-C {devices/gnd.sym} -410 -340 0 0 {name=l1 lab=GND}
-C {devices/gnd.sym} -230 -340 0 0 {name=l3 lab=GND}
-C {devices/lab_pin.sym} -410 -460 0 0 {name=p10 sig_type=std_logic lab=avdd}
-C {devices/lab_pin.sym} -230 -460 0 0 {name=p12 sig_type=std_logic lab=avss}
-C {devices/vsource.sym} -140 -570 0 0 {name=V5 value="Pulse(0 1.8 0 0.1n 0.1n 2.5n 5n)" savecurrent=false}
-C {devices/gnd.sym} -140 -540 0 0 {name=l5 lab=GND}
-C {devices/lab_pin.sym} -140 -650 0 0 {name=p14 sig_type=std_logic lab=clk}
-C {devices/vsource.sym} -230 -570 0 0 {name=V6 value="DC 1.8" savecurrent=false}
-C {devices/gnd.sym} -230 -540 0 0 {name=l6 lab=GND}
-C {devices/lab_pin.sym} -230 -650 0 0 {name=p15 sig_type=std_logic lab=ena}
-C {devices/vsource.sym} -410 -570 0 0 {name=V7 value="AC 1.65" savecurrent=false}
-C {devices/vsource.sym} -320 -570 0 0 {name=V8 value="AC 1.65" savecurrent=false}
-C {devices/gnd.sym} -410 -540 0 0 {name=l7 lab=GND}
-C {devices/gnd.sym} -320 -540 0 0 {name=l8 lab=GND}
-C {devices/lab_pin.sym} -410 -660 0 0 {name=p16 sig_type=std_logic lab=vinp}
-C {devices/lab_pin.sym} -320 -660 0 0 {name=p17 sig_type=std_logic lab=vinn}
+C {devices/vsource.sym} -540 -370 0 0 {name=V1 value="DC 3.3" savecurrent=false}
+C {devices/vsource.sym} -360 -370 0 0 {name=V3 value=0 savecurrent=false}
+C {devices/gnd.sym} -540 -340 0 0 {name=l1 lab=GND}
+C {devices/gnd.sym} -360 -340 0 0 {name=l3 lab=GND}
+C {devices/lab_pin.sym} -540 -460 0 0 {name=p10 sig_type=std_logic lab=avdd}
+C {devices/lab_pin.sym} -360 -460 0 0 {name=p12 sig_type=std_logic lab=avss}
+C {devices/vsource.sym} -270 -570 0 0 {name=V5 value="Pulse(0 1.8 0 0.1n 0.1n 2.5n 5n)" savecurrent=false}
+C {devices/gnd.sym} -270 -540 0 0 {name=l5 lab=GND}
+C {devices/lab_pin.sym} -270 -650 0 0 {name=p14 sig_type=std_logic lab=clk}
+C {devices/vsource.sym} -360 -570 0 0 {name=V6 value="DC 0" savecurrent=false}
+C {devices/gnd.sym} -360 -540 0 0 {name=l6 lab=GND}
+C {devices/lab_pin.sym} -360 -650 0 0 {name=p15 sig_type=std_logic lab=enab}
+C {devices/vsource.sym} -540 -570 0 0 {name=V7 value="DC 1.65 AC 0.1" savecurrent=false}
+C {devices/vsource.sym} -450 -570 0 0 {name=V8 value="DC 1.65 AC 0.1" savecurrent=false}
+C {devices/gnd.sym} -540 -540 0 0 {name=l7 lab=GND}
+C {devices/gnd.sym} -450 -540 0 0 {name=l8 lab=GND}
+C {devices/lab_pin.sym} -540 -660 0 0 {name=p16 sig_type=std_logic lab=vinp}
+C {devices/lab_pin.sym} -450 -660 0 0 {name=p17 sig_type=std_logic lab=vinn}
 C {devices/code_shown.sym} -650 -200 0 0 {name=SETUP only_toplevel=false value="
 .include \{DUT_path\}
 .include /home/ttuser/pdk/sky130A/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
@@ -229,4 +214,18 @@ quit
 C {devices/lab_pin.sym} 640 -340 2 0 {name=p3 sig_type=std_logic lab=vinn
 }
 C {devices/lab_pin.sym} 630 -280 2 0 {name=p4 sig_type=std_logic lab=vout
+}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 390 -540 0 0 {name=M6
+L=1
+W=5
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
 }

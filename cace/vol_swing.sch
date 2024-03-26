@@ -6,41 +6,41 @@ V {}
 S {}
 E {}
 N 620 -600 690 -600 {
-lab=dvdd}
+lab=#net1}
 N 620 -580 690 -580 {
-lab=avdd}
+lab=#net2}
 N 620 -560 690 -560 {
-lab=ena}
+lab=#net3}
 N 620 -540 690 -540 {
-lab=vinn}
+lab=#net4}
 N 620 -520 690 -520 {
-lab=vinp}
+lab=#net5}
 N 620 -500 690 -500 {
-lab=clk}
+lab=#net6}
 N 990 -600 1050 -600 {
-lab=vout}
+lab=#net7}
 N 990 -580 1050 -580 {
-lab=dvss}
+lab=#net8}
 N 990 -560 1050 -560 {
-lab=avss}
+lab=#net9}
 N 90 -650 90 -580 {
-lab=avdd}
+lab=#net10}
 N 180 -650 180 -580 {
-lab=dvdd}
+lab=#net11}
 N 270 -650 270 -580 {
-lab=avss}
+lab=#net12}
 N 360 -650 360 -580 {
-lab=dvss}
+lab=#net13}
 N 360 -840 360 -780 {
-lab=clk}
+lab=#net14}
 N 270 -840 270 -780 {
-lab=ena}
+lab=#net15}
 N 90 -850 90 -780 {
-lab=vinp}
+lab=#net16}
 N 180 -850 180 -780 {
-lab=vinn}
+lab=#net17}
 N 1050 -600 1240 -600 {
-lab=vout}
+lab=#net7}
 C {sky130_icrg_ip__ulpcomp2.sym} 840 -550 0 0 {name=x1}
 C {devices/lab_pin.sym} 620 -600 0 0 {name=p1 sig_type=std_logic lab=dvdd}
 C {devices/lab_pin.sym} 620 -580 0 0 {name=p2 sig_type=std_logic lab=avdd}
@@ -66,7 +66,7 @@ C {devices/lab_pin.sym} 360 -640 0 0 {name=p13 sig_type=std_logic lab=dvss}
 C {devices/vsource.sym} 360 -750 0 0 {name=V5 value="Pulse(0 1.8 0 0.1n 0.1n 2.5n 5n)" savecurrent=false}
 C {devices/gnd.sym} 360 -720 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 360 -830 0 0 {name=p14 sig_type=std_logic lab=clk}
-C {devices/vsource.sym} 270 -750 0 0 {name=V6 value="DC \{ena\}" savecurrent=false}
+C {devices/vsource.sym} 270 -750 0 0 {name=V6 value="DC 1.8" savecurrent=false}
 C {devices/gnd.sym} 270 -720 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 270 -830 0 0 {name=p15 sig_type=std_logic lab=ena}
 C {devices/vsource.sym} 90 -750 0 0 {name=V7 value="DC 0 sin(0 3.3 2MEG 0 0)" savecurrent=false}
@@ -81,20 +81,15 @@ C {devices/code_shown.sym} 90 -410 0 0 {name=SETUP only_toplevel=false value="
 .lib /home/ttuser/pdk/sky130A/libs.tech/combined/sky130.lib.spice \{corner\}
 .option TEMP=\{temperature\}
 .option warn=1"}
-C {devices/code_shown.sym} 90 -260 0 0 {name=CONTROL only_toplevel=false value=".control
-
-op
-set wr_singlescale
-wrdata /home/ttuser/chipalooza2024/sky130_icrg_ip__ulpcomp2/ngspice/\{filename\}_\{N\}.data -I(V2)
-
+C {devices/code_shown.sym} 90 -250 0 0 {name=CONTROL only_toplevel=false value=".control
 *tran 10n 1u
 *set wr_singlescale
-*wrdata /home/ttuser/chipalooza2024/sky130_icrg_ip__ulpcomp2/ngspice/\{filename\}_\{N\}.data -avg(I(V2))
+*wrdata /home/ttuser/chipalooza2024/sky130_icrg_ip__ulpcomp2/ngspice/\{filename\}_\{N\}.data -V(vout)
 
-*tran 10n 1u
-*meas tran i_avg avg I(V2) from=0 to=1u
-*print i_avg
-*echo $&i_avg > /home/ttuser/chipalooza2024/sky130_icrg_ip__ulpcomp2/ngspice/\{filename\}_\{N\}.data
+op
+let vswing = V(vout)
+set wr_singlescale
+echo $&vswing > /home/ttuser/chipalooza2024/sky130_icrg_ip__ulpcomp2/ngspice/\{filename\}_\{N\}.data
 
 quit
 .endc"}
