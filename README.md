@@ -1,5 +1,7 @@
 # sky130_icrg_ip__ulpcomp
-Efabless Chipalooza 2024 Design Challenge. IP created for part of Efabless latest Caravel design. This IP is created by Intelligent Computing Research Group, Shanghai Jiao Tong University. 
+Efabless Chipalooza 2024 Design Challenge. 
+
+IP created as part of Efabless latest Caravel design. This IP is created by Intelligent Computing Research Group, Shanghai Jiao Tong University. 
 
 IP: Ultra Low-Power Comparator.
 
