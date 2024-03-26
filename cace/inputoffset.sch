@@ -5,23 +5,19 @@ K {}
 V {}
 S {}
 E {}
-N 710 -760 780 -760 {
+N 980 -930 980 -860 {
 lab=dvdd}
-N 710 -740 780 -740 {
+N 940 -930 940 -860 {
 lab=avdd}
-N 710 -720 780 -720 {
+N 770 -720 840 -720 {
 lab=ena}
-N 710 -700 780 -700 {
-lab=vinn}
-N 710 -680 780 -680 {
-lab=vinp}
-N 710 -660 780 -660 {
+N 770 -700 840 -700 {
 lab=clk}
 N 1080 -760 1140 -760 {
 lab=vout}
-N 1080 -740 1140 -740 {
+N 980 -660 980 -600 {
 lab=dvss}
-N 1080 -720 1140 -720 {
+N 940 -660 940 -600 {
 lab=avss}
 N 90 -650 90 -580 {
 lab=avdd}
@@ -37,36 +33,35 @@ N 270 -840 270 -780 {
 lab=ena}
 N 1140 -760 1330 -760 {
 lab=vout}
-N 550 -680 710 -680 {
+N 590 -800 590 -760 {
 lab=vinp}
-N 550 -680 550 -640 {
-lab=vinp}
-N 550 -580 550 -550 {
+N 590 -700 590 -670 {
 lab=#net1}
-N 650 -700 710 -700 {
+N 590 -590 690 -590 {
 lab=vinn}
-N 650 -700 650 -470 {
+N 590 -610 590 -590 {
 lab=vinn}
-N 550 -470 650 -470 {
-lab=vinn}
-N 550 -490 550 -470 {
-lab=vinn}
-N 480 -560 550 -560 {
+N 520 -680 590 -680 {
 lab=#net1}
-N 480 -470 480 -420 {
+N 520 -590 520 -540 {
 lab=avss}
-N 480 -560 480 -530 {
+N 520 -680 520 -650 {
 lab=#net1}
-C {sky130_icrg_ip__ulpcomp2.sym} 930 -710 0 0 {name=x1}
-C {devices/lab_pin.sym} 710 -760 0 0 {name=p1 sig_type=std_logic lab=dvdd}
-C {devices/lab_pin.sym} 710 -740 0 0 {name=p2 sig_type=std_logic lab=avdd}
-C {devices/lab_pin.sym} 710 -720 0 0 {name=p3 sig_type=std_logic lab=ena}
-C {devices/lab_pin.sym} 650 -670 0 0 {name=p4 sig_type=std_logic lab=vinn}
-C {devices/lab_pin.sym} 550 -670 0 0 {name=p5 sig_type=std_logic lab=vinp}
-C {devices/lab_pin.sym} 710 -660 0 0 {name=p6 sig_type=std_logic lab=clk}
+N 590 -800 680 -800 {
+lab=vinp}
+N 680 -800 840 -800 {}
+N 690 -770 840 -770 {}
+N 690 -770 690 -590 {}
+C {sky130_icrg_ip__ulpcomp2.sym} 620 -630 0 0 {name=x1}
+C {devices/lab_pin.sym} 980 -930 1 0 {name=p1 sig_type=std_logic lab=dvdd}
+C {devices/lab_pin.sym} 940 -930 1 0 {name=p2 sig_type=std_logic lab=avdd}
+C {devices/lab_pin.sym} 770 -720 0 0 {name=p3 sig_type=std_logic lab=ena}
+C {devices/lab_pin.sym} 590 -590 0 0 {name=p4 sig_type=std_logic lab=vinn}
+C {devices/lab_pin.sym} 590 -790 0 0 {name=p5 sig_type=std_logic lab=vinp}
+C {devices/lab_pin.sym} 770 -700 0 0 {name=p6 sig_type=std_logic lab=clk}
 C {devices/lab_pin.sym} 1330 -760 2 0 {name=p7 sig_type=std_logic lab=vout}
-C {devices/lab_pin.sym} 1140 -740 2 0 {name=p8 sig_type=std_logic lab=dvss}
-C {devices/lab_pin.sym} 1140 -720 2 0 {name=p9 sig_type=std_logic lab=avss}
+C {devices/lab_pin.sym} 980 -600 3 0 {name=p8 sig_type=std_logic lab=dvss}
+C {devices/lab_pin.sym} 940 -600 3 0 {name=p9 sig_type=std_logic lab=avss}
 C {devices/vsource.sym} 90 -550 0 0 {name=V1 value="DC 3.3" savecurrent=false}
 C {devices/vsource.sym} 180 -550 0 0 {name=V2 value="DC 1.8" savecurrent=false}
 C {devices/vsource.sym} 270 -550 0 0 {name=V3 value=0 savecurrent=false}
@@ -85,8 +80,8 @@ C {devices/lab_pin.sym} 360 -830 0 0 {name=p14 sig_type=std_logic lab=clk}
 C {devices/vsource.sym} 270 -750 0 0 {name=V6 value="DC 1.8" savecurrent=false}
 C {devices/gnd.sym} 270 -720 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 270 -830 0 0 {name=p15 sig_type=std_logic lab=ena}
-C {devices/vsource.sym} 550 -520 0 0 {name=V7 value="DC 0 PWL (0 -0.5 \{risetime\} 0.5 [\{risetime\} * 2] -0.5 [\{risetime\} * 3] 0.5 [\{risetime\} * 4] -0.5 )" savecurrent=false}
-C {devices/vsource.sym} 550 -610 0 0 {name=V8 value="DC 0 PWL (0 -0.5 \{risetime\} 0.5 [\{risetime\} * 2] -0.5 [\{risetime\} * 3] 0.5 [\{risetime\} * 4] -0.5 )" savecurrent=false}
+C {devices/vsource.sym} 590 -640 0 0 {name=V7 value="DC 0 PWL (0 -0.5 \{risetime\} 0.5 [\{risetime\} * 2] -0.5 [\{risetime\} * 3] 0.5 [\{risetime\} * 4] -0.5 )" savecurrent=false}
+C {devices/vsource.sym} 590 -730 0 0 {name=V8 value="DC 0 PWL (0 -0.5 \{risetime\} 0.5 [\{risetime\} * 2] -0.5 [\{risetime\} * 3] 0.5 [\{risetime\} * 4] -0.5 )" savecurrent=false}
 C {devices/code_shown.sym} 80 -350 0 0 {name=SETUP only_toplevel=false value="
 .include \{DUT_path\}
 .include /home/ttuser/pdk/sky130A/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
@@ -110,5 +105,5 @@ echo $&voffset $&vhyst > \{simpath\}/\{filename\}_\{N\}.data
 quit
 .endc
 "}
-C {devices/vsource.sym} 480 -500 0 0 {name=V9 value="DC \{Vcm\}" savecurrent=false}
-C {devices/lab_pin.sym} 480 -430 0 0 {name=p18 sig_type=std_logic lab=avss}
+C {devices/vsource.sym} 520 -620 0 0 {name=V9 value="DC \{Vcm\}" savecurrent=false}
+C {devices/lab_pin.sym} 520 -550 0 0 {name=p18 sig_type=std_logic lab=avss}

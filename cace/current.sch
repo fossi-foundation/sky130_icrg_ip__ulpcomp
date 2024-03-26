@@ -5,23 +5,23 @@ K {}
 V {}
 S {}
 E {}
-N 620 -600 690 -600 {
+N 890 -770 890 -700 {
 lab=dvdd}
-N 620 -580 690 -580 {
+N 850 -770 850 -700 {
 lab=avdd}
-N 620 -560 690 -560 {
+N 680 -560 750 -560 {
 lab=ena}
-N 620 -540 690 -540 {
+N 680 -610 750 -610 {
 lab=vinn}
-N 620 -520 690 -520 {
+N 680 -640 750 -640 {
 lab=vinp}
-N 620 -500 690 -500 {
+N 680 -540 750 -540 {
 lab=clk}
 N 990 -600 1050 -600 {
 lab=vout}
-N 990 -580 1050 -580 {
+N 890 -500 890 -440 {
 lab=dvss}
-N 990 -560 1050 -560 {
+N 850 -500 850 -440 {
 lab=avss}
 N 90 -650 90 -580 {
 lab=avdd}
@@ -41,16 +41,16 @@ N 180 -850 180 -780 {
 lab=vinn}
 N 1050 -600 1240 -600 {
 lab=vout}
-C {sky130_icrg_ip__ulpcomp2.sym} 840 -550 0 0 {name=x1}
-C {devices/lab_pin.sym} 620 -600 0 0 {name=p1 sig_type=std_logic lab=dvdd}
-C {devices/lab_pin.sym} 620 -580 0 0 {name=p2 sig_type=std_logic lab=avdd}
-C {devices/lab_pin.sym} 620 -560 0 0 {name=p3 sig_type=std_logic lab=ena}
-C {devices/lab_pin.sym} 620 -540 0 0 {name=p4 sig_type=std_logic lab=vinn}
-C {devices/lab_pin.sym} 620 -520 0 0 {name=p5 sig_type=std_logic lab=vinp}
-C {devices/lab_pin.sym} 620 -500 0 0 {name=p6 sig_type=std_logic lab=clk}
+C {sky130_icrg_ip__ulpcomp2.sym} 530 -470 0 0 {name=x1}
+C {devices/lab_pin.sym} 890 -770 1 0 {name=p1 sig_type=std_logic lab=dvdd}
+C {devices/lab_pin.sym} 850 -770 1 0 {name=p2 sig_type=std_logic lab=avdd}
+C {devices/lab_pin.sym} 680 -560 0 0 {name=p3 sig_type=std_logic lab=ena}
+C {devices/lab_pin.sym} 680 -610 0 0 {name=p4 sig_type=std_logic lab=vinn}
+C {devices/lab_pin.sym} 680 -640 0 0 {name=p5 sig_type=std_logic lab=vinp}
+C {devices/lab_pin.sym} 680 -540 0 0 {name=p6 sig_type=std_logic lab=clk}
 C {devices/lab_pin.sym} 1240 -600 2 0 {name=p7 sig_type=std_logic lab=vout}
-C {devices/lab_pin.sym} 1050 -580 2 0 {name=p8 sig_type=std_logic lab=dvss}
-C {devices/lab_pin.sym} 1050 -560 2 0 {name=p9 sig_type=std_logic lab=avss}
+C {devices/lab_pin.sym} 890 -440 3 0 {name=p8 sig_type=std_logic lab=dvss}
+C {devices/lab_pin.sym} 850 -440 3 0 {name=p9 sig_type=std_logic lab=avss}
 C {devices/vsource.sym} 90 -550 0 0 {name=V1 value="DC 3.3" savecurrent=false}
 C {devices/vsource.sym} 180 -550 0 0 {name=V2 value="DC 1.8" savecurrent=false}
 C {devices/vsource.sym} 270 -550 0 0 {name=V3 value=0 savecurrent=false}
@@ -89,7 +89,7 @@ wrdata /home/ttuser/chipalooza2024/sky130_icrg_ip__ulpcomp2/ngspice/\{filename\}
 
 *tran 10n 1u
 *set wr_singlescale
-*wrdata /home/ttuser/chipalooza2024/sky130_icrg_ip__ulpcomp2/ngspice/\{filename\}_\{N\}.data -avg(I(V2))
+*wrdata /home/ttuser/chipalooza2024/sky130_icrg_ip__ulpcomp2/ngspice/\{filename\}_\{N\}.data -I(V2)
 
 *tran 10n 1u
 *meas tran i_avg avg I(V2) from=0 to=1u
