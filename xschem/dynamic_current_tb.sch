@@ -63,10 +63,10 @@ C {devices/lab_pin.sym} 90 -640 0 0 {name=p10 sig_type=std_logic lab=avdd}
 C {devices/lab_pin.sym} 180 -640 0 0 {name=p11 sig_type=std_logic lab=dvdd}
 C {devices/lab_pin.sym} 270 -640 0 0 {name=p12 sig_type=std_logic lab=avss}
 C {devices/lab_pin.sym} 360 -640 0 0 {name=p13 sig_type=std_logic lab=dvss}
-C {devices/vsource.sym} 360 -750 0 0 {name=V5 value="Pulse(0 1.8 0 0.1n 0.1n 2.5n 5n)" savecurrent=false}
+C {devices/vsource.sym} 360 -750 0 0 {name=V5 value="Pulse(0 1.8 0 0.1n 0.1n 5n 10n)" savecurrent=false}
 C {devices/gnd.sym} 360 -720 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 360 -830 0 0 {name=p14 sig_type=std_logic lab=clk}
-C {devices/vsource.sym} 270 -750 0 0 {name=V6 value="DC 1.8" savecurrent=false}
+C {devices/vsource.sym} 270 -750 0 0 {name=V6 value="DC 0" savecurrent=false}
 C {devices/gnd.sym} 270 -720 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 270 -830 0 0 {name=p15 sig_type=std_logic lab=ena}
 C {devices/vsource.sym} 90 -750 0 0 {name=V7 value="DC 0 sin(0 3.3 2MEG 0 0)" savecurrent=false}
@@ -82,7 +82,8 @@ C {devices/code_shown.sym} 90 -290 0 0 {name=s2 only_toplevel=false value=".cont
 tran 10n 1u
 set wr_singlescale
 wrdata \{simpath\}/\{filename\}_\{N\}.data -
-plot V(vinn) V(vinp) v(vout)
+let vdif = V(vinp) - V(vinn)
+plot V(vdif) v(vout)
 plot I(V2)
 
 .endc"}
