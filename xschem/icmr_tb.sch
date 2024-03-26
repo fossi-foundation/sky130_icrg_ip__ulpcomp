@@ -233,4 +233,3 @@ value=0.5p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 680 -190 0 0 {name=l2 lab=GND}
-C {sky130_stdcells/sedfxbp_1.sym} 1000 -500 0 0 {name=x1 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }

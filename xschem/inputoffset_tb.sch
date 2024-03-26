@@ -5,23 +5,15 @@ K {}
 V {}
 S {}
 E {}
-N 800 -600 870 -600 {
-lab=dvdd}
-N 800 -580 870 -580 {
-lab=avdd}
-N 800 -560 870 -560 {
+N 860 -560 930 -560 {
 lab=ena}
-N 800 -540 870 -540 {
-lab=vinn}
-N 800 -520 870 -520 {
-lab=vinp}
-N 800 -500 870 -500 {
+N 860 -540 930 -540 {
 lab=clk}
 N 1170 -600 1230 -600 {
-lab=vout}
-N 1170 -580 1230 -580 {
+lab=vinn}
+N 1070 -500 1070 -440 {
 lab=dvss}
-N 1170 -560 1230 -560 {
+N 1030 -500 1030 -440 {
 lab=avss}
 N 90 -650 90 -580 {
 lab=avdd}
@@ -36,43 +28,49 @@ lab=clk}
 N 270 -840 270 -780 {
 lab=ena}
 N 1230 -600 1420 -600 {
-lab=vout}
-N 720 -540 800 -540 {
 lab=vinn}
-N 670 -540 720 -540 {
+N 850 -610 930 -610 {
 lab=vinn}
-N 670 -520 720 -520 {
+N 800 -610 850 -610 {
+lab=vinn}
+N 800 -640 850 -640 {
 lab=vinp}
-N 720 -520 800 -520 {
+N 850 -640 930 -640 {
 lab=vinp}
-N 560 -540 610 -540 {
+N 690 -610 740 -610 {
 lab=vin}
-N 560 -540 560 -520 {
+N 690 -640 690 -620 {
 lab=vin}
-N 560 -520 610 -520 {
-lab=vin}
-N 460 -530 560 -530 {
+N 690 -640 740 -640 {
 lab=vin}
 N 460 -530 460 -500 {
 lab=vin}
-N 730 -670 730 -540 {
+N 1030 -730 1030 -700 {
+lab=avdd}
+N 1070 -730 1070 -700 {
+lab=dvdd}
+N 690 -620 690 -610 {
+lab=vin}
+N 460 -620 690 -620 {
+lab=vin}
+N 460 -620 460 -530 {
+lab=vin}
+N 810 -610 810 -360 {
 lab=vinn}
-N 730 -670 970 -670 {
+N 810 -360 1320 -360 {
 lab=vinn}
-N 1030 -670 1320 -670 {
-lab=vout}
-N 1320 -670 1320 -600 {
-lab=vout}
-C {sky130_icrg_ip__ulpcomp2.sym} 1020 -550 0 0 {name=x1}
-C {devices/lab_pin.sym} 800 -600 0 0 {name=p1 sig_type=std_logic lab=dvdd}
-C {devices/lab_pin.sym} 800 -580 0 0 {name=p2 sig_type=std_logic lab=avdd}
-C {devices/lab_pin.sym} 800 -560 0 0 {name=p3 sig_type=std_logic lab=ena}
-C {devices/lab_pin.sym} 700 -540 1 0 {name=p4 sig_type=std_logic lab=vinn}
-C {devices/lab_pin.sym} 700 -520 3 0 {name=p5 sig_type=std_logic lab=vinp}
-C {devices/lab_pin.sym} 800 -500 0 0 {name=p6 sig_type=std_logic lab=clk}
+N 1320 -600 1320 -360 {
+lab=vinn}
+C {sky130_icrg_ip__ulpcomp2.sym} 710 -470 0 0 {name=x1}
+C {devices/lab_pin.sym} 1070 -730 1 0 {name=p1 sig_type=std_logic lab=dvdd}
+C {devices/lab_pin.sym} 1030 -730 1 0 {name=p2 sig_type=std_logic lab=avdd}
+C {devices/lab_pin.sym} 860 -560 0 0 {name=p3 sig_type=std_logic lab=ena}
+C {devices/lab_pin.sym} 830 -610 1 1 {name=p4 sig_type=std_logic lab=vinn}
+C {devices/lab_pin.sym} 830 -640 3 1 {name=p5 sig_type=std_logic lab=vinp}
+C {devices/lab_pin.sym} 860 -540 0 0 {name=p6 sig_type=std_logic lab=clk}
 C {devices/lab_pin.sym} 1420 -600 2 0 {name=p7 sig_type=std_logic lab=vout}
-C {devices/lab_pin.sym} 1230 -580 2 0 {name=p8 sig_type=std_logic lab=dvss}
-C {devices/lab_pin.sym} 1230 -560 2 0 {name=p9 sig_type=std_logic lab=avss}
+C {devices/lab_pin.sym} 1070 -440 3 0 {name=p8 sig_type=std_logic lab=dvss}
+C {devices/lab_pin.sym} 1030 -440 3 0 {name=p9 sig_type=std_logic lab=avss}
 C {devices/vsource.sym} 90 -550 0 0 {name=V1 value="DC 3.3" savecurrent=false}
 C {devices/vsource.sym} 180 -550 0 0 {name=V2 value="DC 1.8" savecurrent=false}
 C {devices/vsource.sym} 270 -550 0 0 {name=V3 value=0 savecurrent=false}
@@ -110,18 +108,13 @@ print VIO
 write inputoffset_tb.raw
 
 .endc"}
-C {devices/res.sym} 640 -540 1 0 {name=R1
+C {devices/res.sym} 770 -610 1 1 {name=R1
 value=5k
 footprint=1206
 device=resistor
 m=1}
-C {devices/res.sym} 640 -520 3 0 {name=R2
+C {devices/res.sym} 770 -640 3 1 {name=R2
 value=2.5k
-footprint=1206
-device=resistor
-m=1}
-C {devices/res.sym} 1000 -670 1 0 {name=R3
-value=5k
 footprint=1206
 device=resistor
 m=1}
