@@ -25,4 +25,4 @@ Current available specification to test:
 4. Propagation Delay
 5. Output Voltage Swing
 6. Frequency Bandwidth
-`Test for all corners (tt, ss, ff) under operating temperature of -40 /degree C, 25 /degree C & 85 /degree C.
+`Test for all corners (tt, ss, ff) under operating temperature of -40 /degree C, 25 /degree C & 85 /degree C.`
