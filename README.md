@@ -7,7 +7,14 @@ Technology: Skywater 130nm.
 
 Design Team: Intelligent Computing Research Group, Shanghai Jiao Tong University.
 
-## Undergoing work 
+Status: `Undergoing`
+
+## Schematic
+To view a schematic after cloning the repository:
+```
+cd sky130_icrg_ip__ulpcomp/xschem
+xschem sky130_icrg_ip__ulpcomp2.sch
+```
 
 ## CACE 
 Please check the schematic testbench in the `CACE` file and replace the PDK filepath and write data filepath to your own.
