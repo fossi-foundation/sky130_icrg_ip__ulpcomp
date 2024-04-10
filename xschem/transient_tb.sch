@@ -77,6 +77,8 @@ C {devices/lab_pin.sym} 90 -840 0 0 {name=p16 sig_type=std_logic lab=vinp}
 C {devices/lab_pin.sym} 180 -840 0 0 {name=p17 sig_type=std_logic lab=vinn}
 C {devices/code_shown.sym} 90 -410 0 0 {name=s1 only_toplevel=false value="
 .lib /home/ttuser/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /home/ttuser/pdk/sky130A/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
+.include /home/ttuser/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 .option TEMP=25"}
 C {devices/code_shown.sym} 90 -290 0 0 {name=s2 only_toplevel=false value=".control
 tran 10n 1u
