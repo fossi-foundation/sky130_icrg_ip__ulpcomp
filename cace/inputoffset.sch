@@ -5,19 +5,19 @@ K {}
 V {}
 S {}
 E {}
-N 980 -930 980 -860 {
+N 967.5 -780 967.5 -710 {
 lab=dvdd}
-N 940 -930 940 -860 {
+N 927.5 -780 927.5 -710 {
 lab=avdd}
-N 770 -720 840 -720 {
+N 757.5 -570 827.5 -570 {
 lab=ena}
-N 770 -700 840 -700 {
+N 757.5 -550 827.5 -550 {
 lab=clk}
-N 1080 -760 1140 -760 {
+N 1067.5 -610 1127.5 -610 {
 lab=vout}
-N 980 -660 980 -600 {
+N 967.5 -510 967.5 -450 {
 lab=dvss}
-N 940 -660 940 -600 {
+N 927.5 -510 927.5 -450 {
 lab=avss}
 N 90 -650 90 -580 {
 lab=avdd}
@@ -31,37 +31,38 @@ N 360 -840 360 -780 {
 lab=clk}
 N 270 -840 270 -780 {
 lab=ena}
-N 1140 -760 1330 -760 {
-lab=vout}
-N 590 -800 590 -760 {
+N 577.5 -650 577.5 -610 {
 lab=vinp}
-N 590 -700 590 -670 {
+N 577.5 -550 577.5 -520 {
 lab=#net1}
-N 590 -590 690 -590 {
+N 577.5 -440 677.5 -440 {
 lab=vinn}
-N 590 -610 590 -590 {
+N 577.5 -460 577.5 -440 {
 lab=vinn}
-N 520 -680 590 -680 {
+N 507.5 -530 577.5 -530 {
 lab=#net1}
-N 520 -590 520 -540 {
+N 507.5 -440 507.5 -390 {
 lab=avss}
-N 520 -680 520 -650 {
+N 507.5 -530 507.5 -500 {
 lab=#net1}
-N 590 -800 680 -800 {
+N 577.5 -650 667.5 -650 {
 lab=vinp}
-N 680 -800 840 -800 {}
-N 690 -770 840 -770 {}
-N 690 -770 690 -590 {}
-C {sky130_icrg_ip__ulpcomp2.sym} 620 -630 0 0 {name=x1}
-C {devices/lab_pin.sym} 980 -930 1 0 {name=p1 sig_type=std_logic lab=dvdd}
-C {devices/lab_pin.sym} 940 -930 1 0 {name=p2 sig_type=std_logic lab=avdd}
-C {devices/lab_pin.sym} 770 -720 0 0 {name=p3 sig_type=std_logic lab=ena}
-C {devices/lab_pin.sym} 590 -590 0 0 {name=p4 sig_type=std_logic lab=vinn}
-C {devices/lab_pin.sym} 590 -790 0 0 {name=p5 sig_type=std_logic lab=vinp}
-C {devices/lab_pin.sym} 770 -700 0 0 {name=p6 sig_type=std_logic lab=clk}
-C {devices/lab_pin.sym} 1330 -760 2 0 {name=p7 sig_type=std_logic lab=vout}
-C {devices/lab_pin.sym} 980 -600 3 0 {name=p8 sig_type=std_logic lab=dvss}
-C {devices/lab_pin.sym} 940 -600 3 0 {name=p9 sig_type=std_logic lab=avss}
+N 667.5 -650 827.5 -650 {
+lab=vinp}
+N 677.5 -620 827.5 -620 {
+lab=vinn}
+N 677.5 -620 677.5 -440 {
+lab=vinn}
+C {sky130_icrg_ip__ulpcomp2.sym} 607.5 -480 0 0 {name=x1}
+C {devices/lab_pin.sym} 967.5 -780 1 0 {name=p1 sig_type=std_logic lab=dvdd}
+C {devices/lab_pin.sym} 927.5 -780 1 0 {name=p2 sig_type=std_logic lab=avdd}
+C {devices/lab_pin.sym} 757.5 -570 0 0 {name=p3 sig_type=std_logic lab=ena}
+C {devices/lab_pin.sym} 577.5 -440 0 0 {name=p4 sig_type=std_logic lab=vinn}
+C {devices/lab_pin.sym} 577.5 -640 0 0 {name=p5 sig_type=std_logic lab=vinp}
+C {devices/lab_pin.sym} 757.5 -550 0 0 {name=p6 sig_type=std_logic lab=clk}
+C {devices/lab_pin.sym} 1127.5 -610 2 0 {name=p7 sig_type=std_logic lab=vout}
+C {devices/lab_pin.sym} 967.5 -450 3 0 {name=p8 sig_type=std_logic lab=dvss}
+C {devices/lab_pin.sym} 927.5 -450 3 0 {name=p9 sig_type=std_logic lab=avss}
 C {devices/vsource.sym} 90 -550 0 0 {name=V1 value="DC 3.3" savecurrent=false}
 C {devices/vsource.sym} 180 -550 0 0 {name=V2 value="DC 1.8" savecurrent=false}
 C {devices/vsource.sym} 270 -550 0 0 {name=V3 value=0 savecurrent=false}
@@ -80,11 +81,12 @@ C {devices/lab_pin.sym} 360 -830 0 0 {name=p14 sig_type=std_logic lab=clk}
 C {devices/vsource.sym} 270 -750 0 0 {name=V6 value="DC 1.8" savecurrent=false}
 C {devices/gnd.sym} 270 -720 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 270 -830 0 0 {name=p15 sig_type=std_logic lab=ena}
-C {devices/vsource.sym} 590 -640 0 0 {name=V7 value="DC 0 PWL (0 -0.5 \{risetime\} 0.5 [\{risetime\} * 2] -0.5 [\{risetime\} * 3] 0.5 [\{risetime\} * 4] -0.5 )" savecurrent=false}
-C {devices/vsource.sym} 590 -730 0 0 {name=V8 value="DC 0 PWL (0 -0.5 \{risetime\} 0.5 [\{risetime\} * 2] -0.5 [\{risetime\} * 3] 0.5 [\{risetime\} * 4] -0.5 )" savecurrent=false}
+C {devices/vsource.sym} 577.5 -490 0 0 {name=V7 value="DC 0 PWL (0 -0.5 \{risetime\} 0.5 [\{risetime\} * 2] -0.5 [\{risetime\} * 3] 0.5 [\{risetime\} * 4] -0.5 )" savecurrent=false}
+C {devices/vsource.sym} 577.5 -580 0 0 {name=V8 value="DC 0 PWL (0 -0.5 \{risetime\} 0.5 [\{risetime\} * 2] -0.5 [\{risetime\} * 3] 0.5 [\{risetime\} * 4] -0.5 )" savecurrent=false}
 C {devices/code_shown.sym} 80 -350 0 0 {name=SETUP only_toplevel=false value="
 .include \{DUT_path\}
 .include /home/ttuser/pdk/sky130A/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
+.include /home/ttuser/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 .lib /home/ttuser/pdk/sky130A/libs.tech/combined/sky130.lib.spice \{corner\}
 .option TEMP=\{temperature\}
 .option warn=1"}
@@ -92,8 +94,8 @@ C {devices/code_shown.sym} 80 -190 0 0 {name=CONTROL only_toplevel=false value="
 ** Find zero crossing for positive input differential, zero crossing for negative
 ** input differential, then compute the average
 tran 1n 1u
-meas tran vhigh FIND V(inp) WHEN V(out) = [\{Vvdd\} / 2] CROSS=1
-meas tran vlow FIND V(inp) WHEN V(out) = [\{Vvdd\} / 2] CROSS=2
+meas tran vhigh FIND V(inp) WHEN V(vout) = [\{Vvdd\} / 2] CROSS=1
+meas tran vlow FIND V(vinp) WHEN V(vout) = [\{Vvdd\} / 2] CROSS=2
 let vrise = $&vhigh - \{Vcm\}
 let vfall = $&vlow - \{Vcm\}
 
@@ -105,5 +107,5 @@ echo $&voffset $&vhyst > \{simpath\}/\{filename\}_\{N\}.data
 quit
 .endc
 "}
-C {devices/vsource.sym} 520 -620 0 0 {name=V9 value="DC \{Vcm\}" savecurrent=false}
-C {devices/lab_pin.sym} 520 -550 0 0 {name=p18 sig_type=std_logic lab=avss}
+C {devices/vsource.sym} 507.5 -470 0 0 {name=V9 value="DC \{Vcm\}" savecurrent=false}
+C {devices/lab_pin.sym} 507.5 -400 0 0 {name=p18 sig_type=std_logic lab=avss}

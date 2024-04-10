@@ -5,23 +5,23 @@ K {}
 V {}
 S {}
 E {}
-N 890 -770 890 -700 {
+N 782.5 -785 782.5 -715 {
 lab=dvdd}
-N 850 -770 850 -700 {
+N 742.5 -785 742.5 -715 {
 lab=avdd}
-N 680 -560 750 -560 {
+N 572.5 -575 642.5 -575 {
 lab=ena}
-N 680 -610 750 -610 {
+N 572.5 -625 642.5 -625 {
 lab=vinn}
-N 680 -640 750 -640 {
+N 572.5 -655 642.5 -655 {
 lab=vinp}
-N 680 -540 750 -540 {
+N 572.5 -555 642.5 -555 {
 lab=clk}
-N 990 -600 1050 -600 {
+N 882.5 -615 942.5 -615 {
 lab=vout}
-N 890 -500 890 -440 {
+N 782.5 -515 782.5 -455 {
 lab=dvss}
-N 850 -500 850 -440 {
+N 742.5 -515 742.5 -455 {
 lab=avss}
 N 90 -650 90 -580 {
 lab=avdd}
@@ -39,18 +39,16 @@ N 90 -850 90 -780 {
 lab=vinp}
 N 180 -850 180 -780 {
 lab=vinn}
-N 1050 -600 1240 -600 {
-lab=vout}
-C {sky130_icrg_ip__ulpcomp2.sym} 530 -470 0 0 {name=x1}
-C {devices/lab_pin.sym} 890 -770 1 0 {name=p1 sig_type=std_logic lab=dvdd}
-C {devices/lab_pin.sym} 850 -770 1 0 {name=p2 sig_type=std_logic lab=avdd}
-C {devices/lab_pin.sym} 680 -560 0 0 {name=p3 sig_type=std_logic lab=ena}
-C {devices/lab_pin.sym} 680 -610 0 0 {name=p4 sig_type=std_logic lab=vinn}
-C {devices/lab_pin.sym} 680 -640 0 0 {name=p5 sig_type=std_logic lab=vinp}
-C {devices/lab_pin.sym} 680 -540 0 0 {name=p6 sig_type=std_logic lab=clk}
-C {devices/lab_pin.sym} 1240 -600 2 0 {name=p7 sig_type=std_logic lab=vout}
-C {devices/lab_pin.sym} 890 -440 3 0 {name=p8 sig_type=std_logic lab=dvss}
-C {devices/lab_pin.sym} 850 -440 3 0 {name=p9 sig_type=std_logic lab=avss}
+C {sky130_icrg_ip__ulpcomp2.sym} 422.5 -485 0 0 {name=x1}
+C {devices/lab_pin.sym} 782.5 -785 1 0 {name=p1 sig_type=std_logic lab=dvdd}
+C {devices/lab_pin.sym} 742.5 -785 1 0 {name=p2 sig_type=std_logic lab=avdd}
+C {devices/lab_pin.sym} 572.5 -575 0 0 {name=p3 sig_type=std_logic lab=ena}
+C {devices/lab_pin.sym} 572.5 -625 0 0 {name=p4 sig_type=std_logic lab=vinn}
+C {devices/lab_pin.sym} 572.5 -655 0 0 {name=p5 sig_type=std_logic lab=vinp}
+C {devices/lab_pin.sym} 572.5 -555 0 0 {name=p6 sig_type=std_logic lab=clk}
+C {devices/lab_pin.sym} 942.5 -615 2 0 {name=p7 sig_type=std_logic lab=vout}
+C {devices/lab_pin.sym} 782.5 -455 3 0 {name=p8 sig_type=std_logic lab=dvss}
+C {devices/lab_pin.sym} 742.5 -455 3 0 {name=p9 sig_type=std_logic lab=avss}
 C {devices/vsource.sym} 90 -550 0 0 {name=V1 value="DC 3.3" savecurrent=false}
 C {devices/vsource.sym} 180 -550 0 0 {name=V2 value="DC 1.8" savecurrent=false}
 C {devices/vsource.sym} 270 -550 0 0 {name=V3 value=0 savecurrent=false}
@@ -78,6 +76,7 @@ C {devices/lab_pin.sym} 180 -840 0 0 {name=p17 sig_type=std_logic lab=vinn}
 C {devices/code_shown.sym} 90 -410 0 0 {name=SETUP only_toplevel=false value="
 .include \{DUT_path\}
 .include /home/ttuser/pdk/sky130A/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
+.include /home/ttuser/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 .lib /home/ttuser/pdk/sky130A/libs.tech/combined/sky130.lib.spice \{corner\}
 .option TEMP=\{temperature\}
 .option warn=1"}

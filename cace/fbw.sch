@@ -5,20 +5,19 @@ K {}
 V {}
 S {}
 E {}
-T {Stage1: Pre-Amp} 250 -670 0 0 0.4 0.4 {}
-N 320 -300 320 -260 {
+N 75 -337.5 75 -297.5 {
 lab=clk}
-N 180 -370 240 -370 {
+N -65 -407.5 -5 -407.5 {
 lab=vinn}
-N 180 -410 240 -410 {
+N -65 -447.5 -5 -447.5 {
 lab=vinp}
-N 450 -370 540 -370 {
+N 205 -407.5 295 -407.5 {
 lab=oneg}
-N 450 -410 520 -410 {
+N 205 -447.5 275 -447.5 {
 lab=vout}
-N 520 -410 540 -410 {
+N 275 -447.5 295 -447.5 {
 lab=vout}
-N 360 -520 360 -490 {
+N 115 -557.5 115 -527.5 {
 lab=avdd}
 N -540 -470 -540 -400 {
 lab=avdd}
@@ -32,17 +31,17 @@ N -540 -670 -540 -600 {
 lab=vinp}
 N -450 -670 -450 -600 {
 lab=vinn}
-N 360 -300 360 -260 {
+N 115 -337.5 115 -297.5 {
 lab=avss}
-N 360 -570 360 -520 {
+N 115 -607.5 115 -557.5 {
 lab=avdd}
-N 320 -570 320 -490 {
-lab=#net1}
-C {devices/lab_pin.sym} 360 -570 2 0 {name=p1 lab=avdd}
-C {devices/lab_pin.sym} 320 -260 3 0 {name=p7 sig_type=std_logic lab=clk}
-C {devices/lab_pin.sym} 320 -570 0 0 {name=p27 lab=enab}
-C {devices/lab_pin.sym} 540 -370 2 0 {name=p6 sig_type=std_logic lab=oneg}
-C {devices/lab_pin.sym} 180 -410 0 0 {name=p2 sig_type=std_logic lab=vinp}
+N 75 -607.5 75 -527.5 {
+lab=enab}
+C {devices/lab_pin.sym} 115 -607.5 2 0 {name=p1 lab=avdd}
+C {devices/lab_pin.sym} 75 -297.5 3 0 {name=p7 sig_type=std_logic lab=clk}
+C {devices/lab_pin.sym} 75 -607.5 0 0 {name=p27 lab=enab}
+C {devices/lab_pin.sym} 295 -407.5 2 0 {name=p6 sig_type=std_logic lab=oneg}
+C {devices/lab_pin.sym} -65 -447.5 0 0 {name=p2 sig_type=std_logic lab=vinp}
 C {devices/vsource.sym} -540 -370 0 0 {name=V1 value="DC 3.3" savecurrent=false}
 C {devices/vsource.sym} -360 -370 0 0 {name=V3 value=0 savecurrent=false}
 C {devices/gnd.sym} -540 -340 0 0 {name=l1 lab=GND}
@@ -64,6 +63,7 @@ C {devices/lab_pin.sym} -450 -660 0 0 {name=p17 sig_type=std_logic lab=vinn}
 C {devices/code_shown.sym} -650 -200 0 0 {name=SETUP only_toplevel=false value="
 .include \{DUT_path\}
 .include /home/ttuser/pdk/sky130A/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
+.include /home/ttuser/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 .lib /home/ttuser/pdk/sky130A/libs.tech/combined/sky130.lib.spice \{corner\}
 .option TEMP=\{temperature\}
 .option warn=1"}
@@ -76,9 +76,9 @@ echo $&fbw > /home/ttuser/chipalooza2024/sky130_icrg_ip__ulpcomp2/ngspice/\{file
 quit
 
 .endc"}
-C {devices/lab_pin.sym} 180 -370 0 0 {name=p3 sig_type=std_logic lab=vinn
+C {devices/lab_pin.sym} -65 -407.5 0 0 {name=p3 sig_type=std_logic lab=vinn
 }
-C {devices/lab_pin.sym} 540 -410 2 0 {name=p4 sig_type=std_logic lab=vout
+C {devices/lab_pin.sym} 295 -447.5 2 0 {name=p4 sig_type=std_logic lab=vout
 }
-C {Stage1.sym} 20 -250 0 0 {name=x1}
-C {devices/lab_pin.sym} 360 -260 3 0 {name=p9 lab=avss}
+C {Stage1.sym} -225 -287.5 0 0 {name=x1}
+C {devices/lab_pin.sym} 115 -297.5 3 0 {name=p9 lab=avss}
