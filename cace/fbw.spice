@@ -1,0 +1,41 @@
+** sch_path: /home/azwefabless/cheetah_v3_analog/dependencies/sky130_icrg_ip__ulpcomp/cace/fbw.sch
+**.subckt fbw
+V1 avdd GND DC 3.3
+V3 avss GND 0
+V5 clk GND Pulse(0 1.8 0 0.1n 0.1n 2.5n 5n)
+V6 enab GND DC 0
+V7 vinp GND DC 1.65 AC 0.1
+V8 vinn GND DC 1.65 AC 0.1
+x1 avdd enab clk vinn vinp oneg vout avss Stage1
+**** begin user architecture code
+
+
+.include {DUT_path}
+.include {PDK_ROOT}/{PDK}/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
+.include {PDK_ROOT}/{PDK}/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+.lib {PDK_ROOT}/{PDK}/libs.tech/combined/sky130.lib.spice {corner}
+.option TEMP={temperature}
+.option warn=1
+
+
+.control
+ac dec 10 1e2 1e12
+let vog = (mag(V(vout)) / mag(V(vinp)))
+meas ac bw WHEN vog=1 FALL=1
+let fbw = $&bw
+echo $&fbw > ngspice/{filename}_{N}.data
+quit
+
+.endc
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  Stage1.sym # of pins=8
+** sym_path: cace/Stage1.sym
+** sch_path: /home/azwefabless/cheetah_v3_analog/dependencies/sky130_icrg_ip__ulpcomp/cace/cace/Stage1.sch
+.subckt Stage1 avdd enab clka vinn vinp oneg opos avss
+.ends
+
+.GLOBAL GND
+.end

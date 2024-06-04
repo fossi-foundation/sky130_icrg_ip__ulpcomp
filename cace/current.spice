@@ -1,0 +1,44 @@
+** sch_path: /home/azwefabless/cheetah_v3_analog/dependencies/sky130_icrg_ip__ulpcomp/cace/current.sch
+**.subckt current
+x1 dvdd avdd ena vout vinn vinp clk dvss avss sky130_icrg_ip__ulpcomp2
+V1 avdd GND DC 3.3
+V2 dvdd GND DC 1.8
+V3 avss GND 0
+V4 dvss GND 0
+V5 clk GND Pulse(0 1.8 0 0.1n 0.1n 2.5n 5n)
+V6 ena GND DC {ena}
+V7 vinp GND DC 0 sin(0 3.3 2MEG 0 0)
+V8 vinn GND DC 0 sin(0 3.3 9MEG 0 0)
+**** begin user architecture code
+
+
+.include {DUT_path}
+.include {PDK_ROOT}/{PDK}/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
+.include {PDK_ROOT}/{PDK}/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+.lib {PDK_ROOT}/{PDK}/libs.tech/combined/sky130.lib.spice {corner}
+.option TEMP={temperature}
+.option warn=1
+
+
+.control
+
+op
+set wr_singlescale
+wrdata ngspice/{filename}_{N}.data -I(V2)
+
+*tran 10n 1u
+*set wr_singlescale
+*wrdata ngspice/{filename}_{N}.data -I(V2)
+
+*tran 10n 1u
+*meas tran i_avg avg I(V2) from=0 to=1u
+*print i_avg
+*echo $&i_avg > ngspice/{filename}_{N}.data
+
+quit
+.endc
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end
