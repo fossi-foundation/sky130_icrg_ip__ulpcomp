@@ -75,20 +75,20 @@ C {devices/lab_pin.sym} 90 -840 0 0 {name=p16 sig_type=std_logic lab=vinp}
 C {devices/lab_pin.sym} 180 -840 0 0 {name=p17 sig_type=std_logic lab=vinn}
 C {devices/code_shown.sym} 90 -410 0 0 {name=SETUP only_toplevel=false value="
 .include \{DUT_path\}
-.include /home/ttuser/pdk/sky130A/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
-.include /home/ttuser/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
-.lib /home/ttuser/pdk/sky130A/libs.tech/combined/sky130.lib.spice \{corner\}
+.include \{PDK_ROOT\}/\{PDK\}/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
+.include \{PDK_ROOT\}/\{PDK\}/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+.lib \{PDK_ROOT\}/\{PDK\}/libs.tech/combined/sky130.lib.spice \{corner\}
 .option TEMP=\{temperature\}
 .option warn=1"}
 C {devices/code_shown.sym} 90 -250 0 0 {name=CONTROL only_toplevel=false value=".control
 *tran 10n 1u
 *set wr_singlescale
-*wrdata /home/ttuser/chipalooza2024/sky130_icrg_ip__ulpcomp2/ngspice/\{filename\}_\{N\}.data -V(vout)
+*wrdata ngspice/\{filename\}_\{N\}.data -V(vout)
 
 op
 let vswing = V(vout)
 set wr_singlescale
-echo $&vswing > /home/ttuser/chipalooza2024/sky130_icrg_ip__ulpcomp2/ngspice/\{filename\}_\{N\}.data
+echo $&vswing > ngspice/\{filename\}_\{N\}.data
 
 quit
 .endc"}
