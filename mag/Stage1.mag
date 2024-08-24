@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1724459483
+timestamp 1724460254
 << dnwell >>
 rect 402 -4779 4688 -2850
 << nwell >>
@@ -1220,4 +1220,6 @@ flabel metal1 7642 1460 7842 1660 0 FreeSans 256 0 0 0 enab
 port 1 nsew
 flabel metal1 7630 -162 7830 38 0 FreeSans 256 0 0 0 clka
 port 2 nsew
+<< properties >>
+string MASKHINTS_HVI 5450 -560 5875 2890 7655 -560 7945 2890
 << end >>
