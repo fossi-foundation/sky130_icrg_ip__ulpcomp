@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1718247345
+timestamp 1720377809
 << psubdiff >>
 rect -576 1530 -516 1564
 rect 8444 1530 8504 1564
@@ -146,35 +146,35 @@ rect 7523 -7379 8222 -7195
 rect 7304 -7387 8222 -7379
 rect -625 -8046 -196 -7460
 use pa_via_short  pa_via_short_0
-timestamp 1718247345
+timestamp 1717168741
 transform -1 0 12673 0 1 -1794
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_1
-timestamp 1718247345
+timestamp 1717168741
 transform -1 0 12673 0 1 -1279
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_2
-timestamp 1718247345
+timestamp 1717168741
 transform -1 0 12831 0 1 2609
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_22
-timestamp 1718247345
+timestamp 1717168741
 transform -1 0 12455 0 1 2605
 box 4944 -1889 5010 -1683
 use Stage0_clk_inv  x1
-timestamp 1718247345
+timestamp 1717191815
 transform -1 0 8551 0 -1 215
 box 321 -1284 1222 196
 use Stage1  x2
-timestamp 1718247345
+timestamp 1720377317
 transform 1 0 -320 0 1 -3048
 box -305 -4888 7963 4550
 use Stage2_latch  x3
-timestamp 1718247345
+timestamp 1717203204
 transform -1 0 8763 0 1 -4587
 box 300 -2867 4057 739
 use Stage0_ena_inv  x4
-timestamp 1718247345
+timestamp 1717183580
 transform -1 0 6992 0 -1 169
 box 379 -1306 885 152
 << labels >>
