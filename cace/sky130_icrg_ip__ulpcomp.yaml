@@ -1,0 +1,448 @@
+#this is an initial yaml file to just support physical checks 
+name: sky130_icrg_ip__ulpcomp2
+description: Ultra low power comparator
+PDK: sky130A
+cace_format: 5.2
+authorship:
+  designer: Jun Yan Lee
+  company: Intelligent Computing Research Group, SJTU
+  creation_date: March 20, 2024
+  license: Apache 2.0
+paths:
+  root: ..
+  documentation: docs
+  schematic: xschem
+  magic: mag
+  layout: gds
+  netlist: netlist
+pins:
+  clk:
+    description: Clock
+    type: digital
+    direction: input
+    Vmin:
+    - dvss
+    - '-'
+    - '0.3'
+    Vmax:
+    - dvdd
+    - +
+    - '0.3'
+    note: 1.8V digital signal
+  ena:
+    description: Enable input (active low)
+    type: digital
+    direction: input
+    Vmin:
+    - dvss
+    - '-'
+    - '0.3'
+    Vmax:
+    - dvdd
+    - +
+    - '0.3'
+    note: 1.8V digital signal
+  vinn:
+    description: amplifier voltage negative input
+    type: signal
+    direction: output
+    Vmin:
+    - avss
+    - '-'
+    - '0.3'
+    Vmax:
+    - avdd
+    - +
+    - '0.3'
+  vinp:
+    description: amplifier voltage positive input
+    type: signal
+    direction: output
+    Vmin:
+    - avss
+    - '-'
+    - '0.3'
+    Vmax:
+    - avdd
+    - +
+    - '0.3'
+  vout:
+    description: amplifier digital voltage output
+    type: signal
+    direction: output
+    Vmin: dvss
+    Vmax: dvdd
+  avdd:
+    description: Analog power supply
+    type: power
+    direction: inout
+    Vmin: '3.0'
+    Vmax: '3.6'
+  avss:
+    description: Analog ground
+    type: ground
+    direction: inout
+    Vmin: '-0.3'
+    Vmax: '0.3'
+  dvdd:
+    description: Digital power supply
+    type: power
+    direction: inout
+    Vmin: '1.5'
+    Vmax: '2.1'
+  dvss:
+    description: Digital ground
+    type: ground
+    direction: inout
+    Vmin: '-0.3'
+    Vmax: '0.3'
+default_conditions:
+  avdd:
+    description: Analog power supply voltage
+    display: vdd
+    unit: V
+    typical: '3.3'
+  avss:
+    description: Analog ground
+    display: vss
+    unit: V
+    typical: '0'
+  dvdd:
+    description: Digital power supply voltage
+    display: dvdd
+    unit: V
+    typical: '1.8'
+    note: Reference voltage for the enable input
+  dvss:
+    description: Digital ground
+    display: dvss
+    unit: V
+    typical: '0'
+  Rout:
+    description: Output load resistance
+    display: RLoad
+    unit: MΩ
+    typical: '100'
+  Cout:
+    description: Output load capacitance
+    display: CLoad
+    unit: fF
+    maximum: '100'
+  ena:
+    description: Amplifier enable
+    display: ena
+    typical: '1'
+  Vcm:
+    description: Common-mode input voltage
+    display: Vcm
+    typical: '1.65'
+  Vdiff:
+    description: Differential input voltage
+    display: Vdiff
+    typical: '0'
+  temperature:
+    description: Ambient temperature
+    display: Temp
+    unit: °C
+    minimum: '-40'
+    typical: '25'
+    maximum: '85'
+  corner:
+    description: Process corner
+    display: Corner
+    minimum: ss
+    typical: tt
+    maximum: ff
+  iterations:
+    description: Iterations to run
+    display: Iterations
+    minimum: '1'
+    maximum: '10'
+    step: linear
+    stepsize: '1'
+parameters:
+  Idd_enabled:
+    description: Current draw through digital supply, comparator enabled, no load
+    display: Power Consumption (Dynamic)
+    unit: µA
+    spec:
+      minimum:
+        value: any
+      typical:
+        value: '2'
+      maximum:
+        value: '6'
+        fail: true
+    conditions:
+      avdd:
+        typical: '3.3'
+      dvdd:
+        typical: '1.8'
+      ena:
+        typical: '1.8'
+      frequency1:
+        typical: '13'
+        unit: MHz
+      frequency2:
+        typical: '9'
+        unit: MHz
+      Vdiff:
+        typical: '1.65'
+        note: Zero-to-peak amplitude of sine input
+      temperature:
+        typical: '25'
+      corner:
+        typical: tt
+    tool:
+      ngspice:
+        template: current.sch
+        format: ascii
+        suffix: .data
+        variables:
+        - 'null'
+        - result
+    name: Idd_enabled
+  Idd_disabled:
+    description: Current draw through digital supply, comparator enabled, no load
+    display: Power Consumption (Static)
+    unit: µA
+    spec:
+      minimum:
+        value: any
+      typical:
+        value: '0.001'
+      maximum:
+        value: '0.002'
+        fail: true
+    conditions:
+      avdd:
+        typical: '3.3'
+      dvdd:
+        typical: '1.8'
+      ena:
+        typical: '0'
+      frequency1:
+        typical: '13'
+        unit: MHz
+      frequency2:
+        typical: '9'
+        unit: MHz
+      Vdiff:
+        typical: '1.65'
+        note: Zero-to-peak amplitude of sine input
+      temperature:
+        typical: '25'
+      corner:
+        typical: tt
+    tool:
+      ngspice:
+        template: current.sch
+        format: ascii
+        suffix: .data
+        variables:
+        - 'null'
+        - result
+    name: Idd_disabled
+  Propagation_delay:
+    status: skip
+    description: propagation delay when change state
+    display: Propagation delay
+    unit: µs
+    spec:
+      minimum:
+        value: any
+      typical:
+        value: '3'
+      maximum:
+        value: '5'
+        fail: true
+    conditions:
+      avdd:
+        typical: '3.3'
+      dvdd:
+        typical: '1.8'
+      temperature:
+        maximum: '85'
+        typical: '25'
+        minimum: '-40'
+      corner:
+        minimum: ss
+        typical: tt
+        maximum: ff
+    tool:
+      ngspice:
+        template: transient.sch
+        format: ascii
+        suffix: .data
+        variables:
+        - result
+    name: Propagation_delay
+  Freq_Bandwidth:
+    status: skip
+    description: propagation delay when change state
+    display: Freq BW
+    unit: kHz
+    spec:
+      minimum:
+        value: '5'
+        fail: true
+      typical:
+        value: '10'
+      maximum:
+        value: '20'
+        fail: true
+    conditions:
+      avdd:
+        typical: '3.3'
+      dvdd:
+        typical: '1.8'
+      temperature:
+        maximum: '85'
+        typical: '25'
+        minimum: '-40'
+      corner:
+        minimum: ss
+        typical: tt
+        maximum: ff
+    tool:
+      ngspice:
+        template: fbw.sch
+        format: ascii
+        suffix: .data
+        variables:
+        - result
+    name: Freq_Bandwidth
+  Voltage_swing:
+    status: skip
+    description: Output voltage swing
+    display: Output Voltage swing
+    unit: V
+    spec:
+      minimum:
+        value: '0'
+        fail: true
+      typical:
+        value: any
+      maximum:
+        value: '1.8'
+        fail: true
+    conditions:
+      avdd:
+        typical: '3.3'
+      dvdd:
+        typical: '1.8'
+      temperature:
+        maximum: '85'
+        typical: '25'
+        minimum: '-40'
+      corner:
+        minimum: ss
+        typical: tt
+        maximum: ff
+    tool:
+      ngspice:
+        template: vol_swing.sch
+        format: ascii
+        suffix: .data
+        variables:
+        - result
+    name: Voltage_swing
+  offset_error:
+    status: skip
+    description: Input Offset Voltage
+    display: Input Offset Voltage
+    unit: mV
+    spec:
+      minimum:
+        value: any
+      typical:
+        value: '1'
+      maximum:
+        value: '2'
+        fail: true
+    conditions:
+      Vvdd:
+        typical: '3.3'
+      temperature:
+        maximum: '85'
+        typical: '25'
+        minimum: '-40'
+      risetime:
+        display: Trise
+        unit: ms
+        typical: '50'
+        note: Ramp rate of Vdiff for input offset measurement
+      Vcm:
+        minimum: '0.33'
+        maximum: '2.97'
+        note: offset measured at 10% and 90% values
+      corner:
+        minimum: ss
+        typical: tt
+        maximum: ff
+    tool:
+      ngspice:
+        template: inputoffset.sch
+        format: ascii
+        suffix: .data
+        variables:
+        - result
+        - 'null'
+    name: offset_error
+
+  magic_area:
+    spec:
+      area:
+        display: Area
+        description: Total circuit layout area
+        unit: µm²
+        maximum:
+          value: any
+      width:
+        display: Width
+        description: Total circuit layout width
+        unit: µm
+        maximum:
+          value: any
+      height:
+        display: Height
+        description: Total circuit layout height
+        unit: µm
+        maximum:
+          value: any
+    tool:
+      magic_area
+
+  magic_drc:
+    description: Magic DRC
+    display: Magic DRC
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+      magic_drc:
+        gds_flatten: true
+
+  netgen_lvs:
+    description: Netgen LVS
+    display: Netgen LVS
+    spec:
+      lvs_errors:
+        maximum:
+          value: 0
+    tool:
+      netgen_lvs:
+        script: run_lvs.tcl
+
+  klayout_drc_full:
+    description: KLayout DRC full
+    display: KLayout DRC full
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+        klayout_drc:
+            args: ['-rd', 'feol=true', '-rd', 'beol=true', '-rd', 'offgrid=true']
+
