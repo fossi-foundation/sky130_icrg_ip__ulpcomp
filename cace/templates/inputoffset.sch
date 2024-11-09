@@ -85,9 +85,9 @@ C {devices/vsource.sym} 577.5 -490 0 0 {name=V7 value="DC 0 PWL (0 -0.5 \{riseti
 C {devices/vsource.sym} 577.5 -580 0 0 {name=V8 value="DC 0 PWL (0 -0.5 \{risetime\} 0.5 [\{risetime\} * 2] -0.5 [\{risetime\} * 3] 0.5 [\{risetime\} * 4] -0.5 )" savecurrent=false}
 C {devices/code_shown.sym} 80 -350 0 0 {name=SETUP only_toplevel=false value="
 .include \{DUT_path\}
-.include /home/ttuser/pdk/sky130A/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
-.include /home/ttuser/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
-.lib /home/ttuser/pdk/sky130A/libs.tech/combined/sky130.lib.spice \{corner\}
+.include \{PDK_ROOT\}/\{PDK\}/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
+.include \{PDK_ROOT\}/\{PDK\}/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+.lib \{PDK_ROOT\}/\{PDK\}/libs.tech/combined/sky130.lib.spice \{corner\}
 .option TEMP=\{temperature\}
 .option warn=1"}
 C {devices/code_shown.sym} 80 -190 0 0 {name=CONTROL only_toplevel=false value=".control

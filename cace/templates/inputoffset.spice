@@ -1,0 +1,45 @@
+** sch_path: /home/azwefabless/cheetah_v3_analog/dependencies/sky130_icrg_ip__ulpcomp/cace/inputoffset.sch
+**.subckt inputoffset
+x1 dvdd avdd ena vout vinn vinp clk dvss avss sky130_icrg_ip__ulpcomp2
+V1 avdd GND DC 3.3
+V2 dvdd GND DC 1.8
+V3 avss GND 0
+V4 dvss GND 0
+V5 clk GND Pulse(0 1.8 0 0.1n 0.1n 2.5n 5n)
+V6 ena GND DC 1.8
+V7 net1 vinn DC 0 PWL (0 -0.5 {risetime} 0.5 [{risetime} * 2] -0.5 [{risetime} * 3] 0.5 [{risetime} * 4] -0.5 )
+V8 vinp net1 DC 0 PWL (0 -0.5 {risetime} 0.5 [{risetime} * 2] -0.5 [{risetime} * 3] 0.5 [{risetime} * 4] -0.5 )
+V9 net1 avss DC {Vcm}
+**** begin user architecture code
+
+
+.include {DUT_path}
+.include {PDK_ROOT}/{PDK}/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
+.include {PDK_ROOT}/{PDK}/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+.lib {PDK_ROOT}/{PDK}/libs.tech/combined/sky130.lib.spice {corner}
+.option TEMP={temperature}
+.option warn=1
+
+
+.control
+** Find zero crossing for positive input differential, zero crossing for negative
+** input differential, then compute the average
+tran 1n 1u
+meas tran vhigh FIND V(inp) WHEN V(vout) = [{Vvdd} / 2] CROSS=1
+meas tran vlow FIND V(vinp) WHEN V(vout) = [{Vvdd} / 2] CROSS=2
+let vrise = $&vhigh - {Vcm}
+let vfall = $&vlow - {Vcm}
+
+let voffset = 0.5 * ($&vrise + $&vfall)
+let vhyst = $&vrise - $&vfall
+
+echo $&voffset $&vhyst > {simpath}/{filename}_{N}.data
+
+quit
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end
