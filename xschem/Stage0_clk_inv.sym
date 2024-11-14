@@ -1,4 +1,4 @@
-v {xschem version=3.4.4 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {type=subcircuit
@@ -29,11 +29,11 @@ L 4 80 -40 520 -40 {}
 L 4 280 -80 510 -80 {}
 L 4 280 -130 280 -80 {}
 L 4 90 -210 230 -130 {}
-B 5 147.5 -242.5 152.5 -237.5 {name=dvddb sig_type=std_logic dir=in}
+B 5 147.5 -242.5 152.5 -237.5 {name=dvddb dir=in}
 B 5 527.5 -132.5 532.5 -127.5 {name=clka sig_type=std_logic dir=out}
 B 5 67.5 -132.5 72.5 -127.5 {name=clk dir=in}
 B 5 527.5 -82.5 532.5 -77.5 {name=clkb sig_type=std_logic dir=out}
-B 5 147.5 -32.5 152.5 -27.5 {name=dvss sig_type=std_logic dir=out}
+B 5 147.5 -32.5 152.5 -27.5 {name=dvss dir=in}
 A 4 235 -130 11.18033988749895 243.434948822922 360 {}
 A 4 475 -130 11.18033988749895 243.434948822922 360 {}
 T {@symname} 369 -216 0 0 0.3 0.3 {}

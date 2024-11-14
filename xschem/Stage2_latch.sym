@@ -1,4 +1,4 @@
-v {xschem version=3.4.4 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {type=subcircuit
@@ -40,7 +40,7 @@ B 5 307.5 -102.5 312.5 -97.5 {name=clkb sig_type=std_logic dir=in}
 B 5 447.5 -192.5 452.5 -187.5 {name=vout dir=out}
 B 5 217.5 -172.5 222.5 -167.5 {name=oneg sig_type=std_logic dir=in}
 B 5 217.5 -212.5 222.5 -207.5 {name=opos sig_type=std_logic dir=in}
-B 5 347.5 -102.5 352.5 -97.5 {name=dvss dir=out}
+B 5 347.5 -102.5 352.5 -97.5 {name=dvss dir=in}
 T {@symname} 268 -206 0 0 0.3 0.3 {}
 T {@name} 395 -302 0 0 0.2 0.2 {}
 T {dvdd} 355 -274 0 0 0.2 0.2 {}
