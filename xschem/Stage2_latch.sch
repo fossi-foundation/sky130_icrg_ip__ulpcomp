@@ -103,7 +103,8 @@ N 80 -400 120 -400 {
 lab=vout}
 N 510 -640 510 -610 {
 lab=dvdd}
-N 120 -490 120 -460 {}
+N 120 -490 120 -460 {
+lab=dvddb}
 C {devices/ipin.sym} 220 -460 0 0 {name=p15 sig_type=std_logic lab=clkb
 }
 C {devices/lab_pin.sym} 840 -460 2 0 {name=p16 sig_type=std_logic lab=clkb
@@ -111,7 +112,7 @@ C {devices/lab_pin.sym} 840 -460 2 0 {name=p16 sig_type=std_logic lab=clkb
 C {devices/lab_pin.sym} 410 -140 0 0 {name=p17 sig_type=std_logic lab=clkb
 }
 C {devices/opin.sym} 80 -400 2 0 {name=p18 lab=vout}
-C {devices/opin.sym} 520 -60 0 0 {name=p19 lab=dvss}
+C {devices/ipin.sym} 520 -60 0 0 {name=p19 lab=dvss}
 C {devices/lab_pin.sym} 680 -250 2 0 {name=p20 sig_type=std_logic lab=dvss}
 C {devices/lab_pin.sym} 360 -250 0 0 {name=p21 sig_type=std_logic lab=dvss}
 C {devices/lab_pin.sym} 400 -310 2 0 {name=p22 sig_type=std_logic lab=dvss}

@@ -1,4 +1,4 @@
-v {xschem version=3.4.4 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {}
@@ -25,7 +25,7 @@ N 240 -110 240 -50 {
 lab=dvss}
 C {devices/ipin.sym} 160 -200 0 0 {name=p27 lab=ena}
 C {devices/ipin.sym} 240 -330 0 0 {name=p28 sig_type=std_logic lab=dvdd}
-C {devices/opin.sym} 240 -50 0 0 {name=p33 sig_type=std_logic lab=dvss}
+C {devices/ipin.sym} 240 -50 0 0 {name=p33 sig_type=std_logic lab=dvss}
 C {devices/opin.sym} 290 -200 0 0 {name=p37 sig_type=std_logic lab=enab}
 C {sky130_fd_pr/pfet_01v8.sym} 220 -250 0 0 {name=M25
 L=0.5

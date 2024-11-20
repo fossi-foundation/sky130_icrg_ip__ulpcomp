@@ -1,4 +1,4 @@
-v {xschem version=3.4.4 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {}
@@ -39,7 +39,7 @@ N 310 -230 370 -230 {
 lab=clkb}
 N 410 -230 490 -230 {
 lab=clka}
-C {devices/opin.sym} 250 -80 0 0 {name=p11 sig_type=std_logic lab=dvss}
+C {devices/ipin.sym} 250 -80 0 0 {name=p11 sig_type=std_logic lab=dvss}
 C {devices/ipin.sym} 250 -360 0 0 {name=p12 sig_type=std_logic lab=dvddb}
 C {devices/opin.sym} 490 -230 0 0 {name=p14 sig_type=std_logic lab=clka
 }
