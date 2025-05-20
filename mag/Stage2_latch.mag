@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1717203204
+timestamp 1747754763
 << locali >>
 rect 1487 621 3461 716
 rect 395 367 479 563
@@ -180,16 +180,16 @@ rect 1312 -1435 1326 -1242
 rect 1393 -1435 3485 -1242
 rect 1149 -1628 2252 -1569
 rect 1686 -1785 3548 -1742
-rect 3857 -1846 4057 -1694
+rect 3857 -1846 4057 -1819
 rect 2433 -1881 4057 -1846
 rect 2433 -2036 2468 -1881
-rect 3857 -1894 4057 -1881
+rect 3857 -1913 4057 -1881
 rect 1919 -2071 2468 -2036
 rect 2822 -2039 3578 -2038
-rect 3857 -2039 4057 -1966
+rect 3857 -2039 4057 -2016
 rect 2822 -2075 4057 -2039
 rect 3541 -2076 4057 -2075
-rect 3857 -2166 4057 -2076
+rect 3857 -2128 4057 -2076
 rect 1305 -2600 1415 -2176
 rect 1568 -2406 3671 -2203
 rect 740 -2672 3970 -2600
@@ -411,10 +411,6 @@ box -296 -419 296 419
 << labels >>
 flabel metal2 740 -2800 940 -2600 0 FreeSans 256 0 0 0 dvss
 port 7 nsew
-flabel metal2 3857 -2166 4057 -1966 0 FreeSans 256 0 0 0 oneg
-port 5 nsew
-flabel metal2 3857 -1894 4057 -1694 0 FreeSans 256 0 0 0 opos
-port 6 nsew
 flabel metal2 1044 -1039 1244 -839 0 FreeSans 256 0 0 0 dvddb
 port 2 nsew
 flabel metal1 1257 527 1457 727 0 FreeSans 256 0 0 0 clkb
@@ -425,4 +421,8 @@ flabel metal1 300 -2310 500 -2110 0 FreeSans 256 0 0 0 vout
 port 4 nsew
 flabel metal1 978 524 1178 724 0 FreeSans 256 0 0 0 enab
 port 1 nsew
+flabel metal2 3857 -1913 4057 -1819 0 FreeSans 256 0 0 0 opos
+port 6 nsew
+flabel metal2 3857 -2128 4057 -2016 0 FreeSans 256 0 0 0 oneg
+port 5 nsew
 << end >>
