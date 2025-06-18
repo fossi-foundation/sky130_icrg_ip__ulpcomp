@@ -135,8 +135,8 @@ XXM11 dvddb dvddb m2_1331_n391# m1_683_n2348# sky130_fd_pr__pfet_01v8_hvt_3HBZVM
 .ends
 
 .subckt Stage0_ena_inv dvdd ena enab dvss
-XXM24 dvss enab dvss ena sky130_fd_pr__nfet_01v8_PVEW3M
 XXM25 ena enab dvdd dvdd sky130_fd_pr__pfet_01v8_XPB8Y6
+XXM24 dvss enab dvss ena sky130_fd_pr__nfet_01v8_PVEW3M
 .ends
 
 .subckt sky130_icrg_ip__ulpcomp2 avdd ena vout vinn vinp dvss avss clk dvdd

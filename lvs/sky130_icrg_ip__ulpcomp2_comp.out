@@ -210,14 +210,14 @@ dvddb                                      |dvddb
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes Stage2_latch and Stage2_latch are equivalent.
-Flattening unmatched subcell sky130_fd_pr__nfet_01v8_PVEW3M in circuit Stage0_ena_inv (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__pfet_01v8_XPB8Y6 in circuit Stage0_ena_inv (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_PVEW3M in circuit Stage0_ena_inv (0)(1 instance)
 
 Subcircuit summary:
 Circuit 1: Stage0_ena_inv                  |Circuit 2: Stage0_ena_inv                  
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
 sky130_fd_pr__pfet_01v8 (1)                |sky130_fd_pr__pfet_01v8 (1)                
+sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
 Number of devices: 2                       |Number of devices: 2                       
 Number of nets: 4                          |Number of nets: 4                          
 ---------------------------------------------------------------------------------------

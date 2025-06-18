@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1747754763
+timestamp 1750255277
 << locali >>
 rect 1487 621 3461 716
 rect 395 367 479 563
@@ -20,12 +20,12 @@ rect 1483 -368 3457 -273
 rect 1485 -693 3459 -598
 rect 1489 -1683 3463 -1588
 rect 395 -2454 479 -1704
-rect 923 -1890 1007 -1704
+rect 923 -1890 1001 -1704
 rect 830 -2271 847 -1897
 rect 923 -2258 940 -1890
-rect 978 -2258 1007 -1890
+rect 978 -2258 1001 -1890
 rect 1048 -2024 3943 -1935
-rect 923 -2454 1007 -2258
+rect 923 -2454 1001 -2258
 rect 1449 -2512 1558 -2024
 rect 1044 -2602 1561 -2512
 rect 3348 -2602 3506 -2024
@@ -114,12 +114,12 @@ rect 2117 -1625 2641 -1624
 rect 2714 -1625 3230 -1624
 rect 1326 -1920 2597 -1853
 rect 1110 -2046 1707 -1979
-rect 1110 -2114 1177 -2046
-rect 1110 -2148 1271 -2114
+rect 1110 -2101 1177 -2046
+rect 1110 -2148 1271 -2101
 rect 838 -2269 991 -2258
 rect 931 -2280 991 -2269
-rect 1132 -2407 1179 -2194
-rect 529 -2454 1179 -2407
+rect 1121 -2407 1168 -2194
+rect 529 -2454 1168 -2407
 rect 1237 -2431 1271 -2148
 rect 1640 -2414 1707 -2046
 rect 1763 -2154 1797 -2071
@@ -197,215 +197,215 @@ rect 740 -2727 1063 -2672
 rect 3409 -2727 3970 -2672
 rect 740 -2800 3970 -2727
 use pa_via  pa_via_0
-timestamp 1717165164
+timestamp 1750255277
 transform 1 0 799 0 1 -4742
 box -10 3586 63 4043
 use pa_via  pa_via_1
-timestamp 1717165164
+timestamp 1750255277
 transform 1 0 441 0 1 -4728
 box -10 3586 63 4043
 use pa_via  pa_via_2
-timestamp 1717165164
+timestamp 1750255277
 transform 1 0 542 0 1 -4592
 box -10 3586 63 4043
 use pa_via  pa_via_3
-timestamp 1717165164
+timestamp 1750255277
 transform 1 0 797 0 1 -3806
 box -10 3586 63 4043
 use pa_via  pa_via_4
-timestamp 1717165164
+timestamp 1750255277
 transform 1 0 3805 0 1 -6252
 box -10 3586 63 4043
 use pa_via  pa_via_5
-timestamp 1717165164
+timestamp 1750255277
 transform 1 0 540 0 1 -3659
 box -10 3586 63 4043
 use pa_via  pa_via_6
-timestamp 1717165164
+timestamp 1750255277
 transform 1 0 438 0 1 -3796
 box -10 3586 63 4043
 use pa_via_short  pa_via_short_0
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -3624 0 1 -489
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_1
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -4131 0 1 -291
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_2
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -3106 0 1 1773
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_3
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -3381 0 1 2140
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_4
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -2890 0 1 2154
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_5
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -2399 0 1 2148
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_6
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -1914 0 1 2148
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_7
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -2612 0 1 1781
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_8
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -2142 0 1 1767
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_9
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -2887 0 1 844
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_10
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -1657 0 1 1770
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_11
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -1657 0 1 448
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_12
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -2139 0 1 454
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_13
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -2627 0 1 451
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_14
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -3106 0 1 454
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_15
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -3360 0 1 846
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_16
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -2396 0 1 855
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_17
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -1916 0 1 844
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_18
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -2648 0 1 -522
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_19
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -1348 0 1 -520
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_20
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -1759 0 1 -520
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_22
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -3834 0 1 195
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_24
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 -3618 0 1 1322
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_25
-timestamp 1717168741
+timestamp 1750255277
 transform 0 1 4006 -1 0 3380
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_26
-timestamp 1717168741
+timestamp 1750255277
 transform 0 1 4091 -1 0 4693
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_28
-timestamp 1717168741
+timestamp 1750255277
 transform 0 1 3541 -1 0 3218
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_29
-timestamp 1717168741
+timestamp 1750255277
 transform 0 1 3639 -1 0 2918
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_30
-timestamp 1717168741
+timestamp 1750255277
 transform 0 1 4529 -1 0 2919
 box 4944 -1889 5010 -1683
 use pa_via_short  pa_via_short_32
-timestamp 1717168741
+timestamp 1750255277
 transform 0 1 5426 -1 0 3220
 box 4944 -1889 5010 -1683
 use sky130_fd_pr__pfet_01v8_hvt_3HBZVM  sky130_fd_pr__pfet_01v8_hvt_3HBZVM_0 paramcells
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 1741 0 1 -1140
 box -296 -519 296 519
 use sky130_fd_pr__pfet_01v8_hvt_3HBZVM  sky130_fd_pr__pfet_01v8_hvt_3HBZVM_1
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 2227 0 1 -1140
 box -296 -519 296 519
 use sky130_fd_pr__pfet_01v8_hvt_3HBZVM  sky130_fd_pr__pfet_01v8_hvt_3HBZVM_2
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 2713 0 1 -1140
 box -296 -519 296 519
 use sky130_fd_pr__pfet_01v8_hvt_3HBZVM  sky130_fd_pr__pfet_01v8_hvt_3HBZVM_3
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 3199 0 1 -1140
 box -296 -519 296 519
 use sky130_fd_pr__pfet_01v8_hvt_3HBZVM  sky130_fd_pr__pfet_01v8_hvt_3HBZVM_4
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 701 0 1 80
 box -296 -519 296 519
 use sky130_fd_pr__pfet_01v8_hvt_3HBZVM  sky130_fd_pr__pfet_01v8_hvt_3HBZVM_5
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 701 0 1 -852
 box -296 -519 296 519
 use sky130_fd_pr__pfet_01v8_hvt_3HBZVM  XM1
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 3201 0 1 170
 box -296 -519 296 519
 use sky130_fd_pr__nfet_03v3_nvt_UNEQ2N  XM2 paramcells
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 1782 0 1 -2317
 box -288 -358 288 358
 use sky130_fd_pr__nfet_03v3_nvt_UNEQ2N  XM3
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 2228 0 1 -2317
 box -288 -358 288 358
 use sky130_fd_pr__nfet_03v3_nvt_UNEQ2N  XM4
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 2674 0 1 -2317
 box -288 -358 288 358
 use sky130_fd_pr__nfet_03v3_nvt_UNEQ2N  XM5
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 3120 0 1 -2317
 box -288 -358 288 358
 use sky130_fd_pr__pfet_01v8_hvt_3HBZVM  XM10
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 1743 0 1 170
 box -296 -519 296 519
 use sky130_fd_pr__pfet_01v8_hvt_3HBZVM  XM11
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 2229 0 1 170
 box -296 -519 296 519
 use sky130_fd_pr__pfet_01v8_hvt_3HBZVM  XM12
-timestamp 1717168741
+timestamp 1750255277
 transform 1 0 2715 0 1 170
 box -296 -519 296 519
 use sky130_fd_pr__nfet_03v3_nvt_WSEQJ8  XM15 paramcells
-timestamp 1717166647
+timestamp 1750255277
 transform 1 0 3720 0 1 -2409
 box -278 -458 278 458
 use sky130_fd_pr__nfet_01v8_PVEW3M  XM18 paramcells
-timestamp 1717166647
-transform 1 0 1258 0 1 -2279
+timestamp 1750255277
+transform 1 0 1247 0 1 -2279
 box -246 -310 246 310
 use sky130_fd_pr__pfet_01v8_3HY9VM  XM19 paramcells
-timestamp 1717166647
+timestamp 1750255277
 transform 1 0 701 0 1 -2084
 box -296 -419 296 419
 << labels >>
